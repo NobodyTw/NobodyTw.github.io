@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haki farm</title>
+    <link rel="stylesheet" href="../css/hakifarm.css">
+</head>
+
+<body>
+    <!-- Navegação-->
+    <header>
+        <h1>Nobody Page </h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="NuvemScripts.html">Scripts</a></li>
+                <li><a href="sobremim.html">Sobre</a></li>
+                <li><a href="contatos.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1
+        style="background-color: gray; color: rgb(136, 255, 81); text-shadow: black 3px 3px 3px; text-align: center; height: 50px;">
+        Haki farm
+    </h1>
+    <h3 style="text-align: center; text-decoration: underline;">Necessario ter pelo menos 50 de haki para
+        funcionar
+    </h3>
+    <P style="margin-top: 20px;"><small>-- Obtém a instância do jogador local<br>
+            local player = game:GetService("Players").LocalPlayer<br>
+            local GeneratedUserString = "User_" .. player.UserId<br>
+            <br> <br>
+
+            -- Variável global para controlar a fazenda<br>
+            getgenv().farm = true -- true para habilitar, false para desabilitar
+            <br> <br>
+
+            -- Função para obter a barra de vida do jogador<br>
+            local function getHealthBar()<br>
+            local healthBar = player:WaitForChild("PlayerGui"):WaitForChild("HealthBar", 5) -- Espera até encontrar
+            a
+            barra
+            de vida<br>
+            return healthBar.Frame.Haki.Frame.Min.Value, healthBar.Frame.<br>Haki.Frame.Max.Value<br>
+            end
+            <br> <br>
+
+            -- Laço para realizar a fazenda<br>
+            while getgenv().farm do<br>
+            wait(0.025)<br>
+            local minValue, maxValue = getHealthBar()<br>
+            <br> <br>
+
+            -- Repete até que a vida mínima seja menor ou igual a 300 ou até que a fazenda seja desabilitada<br>
+            while minValue > 50 and getgenv().farm do<br>
+            wait()<br>
+            spawn(function()<br>
+            workspace.UserData[GeneratedUserString].III:FireServer("On", 1)<br>
+            wait(0.025)<br>
+            workspace.UserData[GeneratedUserString].III:FireServer("Off", 1)<br>
+            end)<br>
+            minValue, maxValue = getHealthBar()<br>
+            end
+            <br> <br>
+
+            -- Espera até que a vida mínima seja igual à máxima ou até que a fazenda seja desabilitada<br>
+            repeat<br>
+            wait()<br>
+            minValue, maxValue = getHealthBar()<br>
+            until minValue == maxValue or not getgenv().farm<br>
+            end</small></P>
+    <br> <br>
+    <button><a href="NuvemScripts.html">Voltar</a></button>
+</body>
+
+</html>

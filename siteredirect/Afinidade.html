@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>afinidade</title>
+    <link rel="stylesheet" href="../css/Afinidade.css">
+    </script>
+</head>
+
+<body>
+    <!-- Navegação-->
+    <header>
+        <h1>Nobody Page </h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="NuvemScripts.html">Scripts</a></li>
+                <li><a href="sobremim.html">Sobre</a></li>
+                <li><a href="contatos.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Titulo-->
+    <h2>Afinidade script</h2>
+    <hr>
+
+    <!--subtitulo-->
+    <h2>Gira afinidade com gema, se possuir alguma affy 1.9 ou menor assim que executar o script vai perder, trava
+        automaticamente quando pega 2x</h2><br> <br>
+
+    <!--Paragrafo-->
+    <p><small>while wait(8) do<br>
+
+            local player = game.Players.LocalPlayer<br>
+            local playerId = player.UserId<br>
+            local userDataName = game.Workspace.UserData["User_" .. playerId]<br>
+            local AffMelee = userDataName.Data.DFT1Melee.Value<br>
+            local AffSniper = userDataName.Data.DFT1Sniper.Value<br>
+            local AffDefense = userDataName.Data.DFT1Defense.Value<br>
+            local AffSword = userDataName.Data.DFT1Sword.Value<br>
+            <br>
+            if AffSniper == 2 and<br>
+            AffSword == 2 and<br>
+            AffMelee == 2 and<br>
+            AffDefense == 2 then<br>
+            <br>
+
+            script.Parent:Destroy()<br>
+            end<br>
+            <br>
+
+            local args = {<br>
+            [1] = "DFT1",<br>
+            [2] = false, -- defense<br>
+            [3] = false, -- melee<br>
+            [4] = false, -- sniper<br>
+            [5] = false, -- sword<br>
+            [6] = "Gems"<br>
+            }<br>
+            <br>
+
+            if AffDefense == 2 then<br>
+            args[2] = 0/0<br>
+            end<br>
+            <br>
+            if AffMelee == 2 then<br>
+            args[3] = 0/0<br>
+            end<br>
+            <br>
+            if AffSword == 2 then<br>
+            args[5] = 0/0<br>
+            end<br>
+            <br>
+            if AffSniper == 2 then<br>
+            args[4] = 0/0<br>
+            end<br>
+            <br>
+            workspace:WaitForChild("Merchants"):WaitForChild("AffinityMerchant"):WaitForChild("Clickable"):WaitForChild("Retum"):FireServer(unpack(args))<br>
+            end
+        </small>
+    </p>
+    <br>
+
+    <button><a href="NuvemScripts.html">Voltar</a></button>
+</body>
+
+</html>

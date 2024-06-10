@@ -1,0 +1,53 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+
+}
+
+header {
+    background-color: #E1C9A9;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #452F22;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #452F22;
+}
+
+p {
+    margin-left: 1%;
+    background-color: rgb(196, 196, 196);
+    overflow: scroll;
+    height: 400px;
+    width: 1000px;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    text-shadow: black 2px 1px 2px;
+    font-size: 20px;
+    color: black;
+    margin-left: 15px;
+}
